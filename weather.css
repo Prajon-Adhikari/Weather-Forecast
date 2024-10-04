@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: end;
+    margin: 0px 100px;
+    background-color: rgb(236, 230, 202); 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.day-mode{
+    background-image: linear-gradient(rgb(52, 182, 234), rgb(186, 227, 243));
+}
+
+.night-mode{
+    background-image: linear-gradient(rgb(23, 23, 23), rgb(65, 67, 67));
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2{
+    font-size: 2rem;
+    color: white;
+}
+
+.search-bar-container{
+    display: flex;
+}
+
+.search-bar{
+    width: 320px;
+    height: 40px;
+    padding: 8px 24px;
+    font-size: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border:none;
+    outline: none;
+    background-color: rgb(191, 240, 191);
+}
+
+.search-bar-container button{
+    width: 50px;
+    font-size: 1rem;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(241, 100, 100);
+    color: rgb(38, 38, 38);
+}
+
+/* weather-info */
+.weather-info{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 500px;
+    color: black;
+    gap: 1rem;
+}
+
+.list-of-weather{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.weather-image{
+    width: 100px;
+}
+
+.lists{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 16px 28px;
+    border: 1px solid white;
+    min-height: 300px;
+    min-width: 240px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.city{
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.temperature{
+    font-size: 3.2rem;
+}
+
+.atmosphere{
+    font-size: 1.6rem ;
+}
+
