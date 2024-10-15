@@ -15,7 +15,7 @@ body{
 .container{
     width: 100%;
     border-radius: 10px;
-    padding: 24px;
+    padding:24px;
     box-shadow: 0px 0px 5px grey;
 }
 
@@ -30,7 +30,7 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     height: 100px;
 }
 
@@ -71,7 +71,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 650px;
+    height: 600px;
     color: white;
     gap: 1rem;
 }
@@ -111,7 +111,7 @@ body{
     min-width: 240px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 4px;
 }
 
 .city{
@@ -159,6 +159,7 @@ body{
     list-style: none;
     border-radius: 10px;
     padding: 6px;
+    margin-top: 40px;
 }
 
 .days-weather h3{
@@ -183,11 +184,24 @@ body{
     color: white;
 }
 
+.days-temperature{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.temperature-graph{
+    width: 260px;
+    border: 1px solid black;
+    height: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right,yellow,orange);
+}
+
 
 .box-container{
-    width: 380px;
-    height: 320px;
-    margin-top: 40px;
+    width: 400px;
+    height: 300px;
     border-radius: 20px;
     padding: 20px;
     color: white;
@@ -202,7 +216,7 @@ body{
 }
 
 .light-mode{
-    background-color: rgb(122, 197, 244);
+    background-color: rgb(100, 184, 236);
 }
 
 .box-container img, i{

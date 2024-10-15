@@ -65,6 +65,8 @@ async function showWeather(city) {
     src = "weatherphotos/Clouds.png";
   } else if (weatherType == "Drizzle") {
     src = "weatherphotos/drizzle.png";
+  } else if (weatherType == "Fog") {
+    src = "weatherphotos/fog.png";
   }
   recentImage.src = src;
   document.querySelector(".recent-temperature").innerText = `${Math.round(
@@ -73,6 +75,8 @@ async function showWeather(city) {
   document.querySelector(
     ".recent-atmosphere"
   ).innerText = `Mostly ${data.weather[0].main}`;
+
+  searchBar.value = "";
 
   let prevCity = data.name;
   let prevImageSrc = src;
@@ -116,6 +120,13 @@ async function showWeather(city) {
 
   weatherList.insertBefore(newList, weatherList.firstChild);
 
+  document.querySelector(".min-temperature").innerText = Math.round(
+    data.main.temp_min
+  );
+  document.querySelector(".max-temperature").innerText = Math.round(
+    data.main.temp_max
+  );
+
   document.querySelector(
     ".humidity-percentage"
   ).innerText = `${data.main.humidity} %`;
@@ -123,16 +134,16 @@ async function showWeather(city) {
   document.querySelector(".wind-percentage").innerText = `${Math.round(
     data.wind.speed
   )} KM/H`;
+
   document.querySelector(".wind-degree").innerText = `The Gusts speed is ${
-    data.wind.gusts === undefined ? 0 : Math.round(data.wind.gusts)
+    data.wind.gust === undefined ? 0 : Math.round(data.wind.gust)
   } KM/H`;
 
   document.querySelector(
     ".pressure-percentage"
   ).innerText = `${data.main.pressure} hPa`;
+
   document.querySelector(
     ".pressure-degree"
   ).innerText = `The pressure is ${data.main.pressure} hPa`;
-
-  searchBar.value = "";
 }
