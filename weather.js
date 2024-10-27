@@ -147,3 +147,20 @@ async function showWeather(city) {
     ".pressure-degree"
   ).innerText = `The pressure is ${data.main.pressure} hPa`;
 }
+
+weatherList.addEventListener("click", (event) => {
+  const listItem = event.target.closest("li.lists");
+  if (listItem) {
+    const cityNameElement = listItem.querySelector(".city");
+    if (cityNameElement) {
+      const clickedCity = cityNameElement.innerText;
+      const numberOfItem = document.querySelectorAll(".lists").length;
+      if (numberOfItem == 5) {
+        let lastElement = weatherList.lastElementChild;
+        console.log(lastElement);
+        lastElement.remove();
+      }
+      showWeather(clickedCity);
+    }
+  }
+});
